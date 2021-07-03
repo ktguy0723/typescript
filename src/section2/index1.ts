@@ -62,7 +62,7 @@ function add(num1: number, num2: number): number {
 }
 add(1, 2);
 
-function hello(): void{
+function hello1(): void{
   console.log('hello');
 }
 
