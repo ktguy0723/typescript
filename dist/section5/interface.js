@@ -14,8 +14,8 @@ class Developer {
 }
 const user = new Developer('Quill', 38, 3);
 const user2 = new Developer('Quill', 38); // rankは?なのであってもなくてもよい
-user.greeting("GoodMorning");
-user.greeting();
+user.greeting("GoodMorning"); // => GoodMorning
+user.greeting(); // => Hello
 const human = {
     name: "Quill",
     age: 12,
