@@ -57,3 +57,25 @@ class B extends A {
 }
 const b = new B();
 b.a();
+/**************************************************************************
+ * singleton
+ **************************************************************************/
+class Singleton {
+    constructor(value) {
+        this.value = value;
+    }
+    static getInstance(val) {
+        if (Singleton.instance) {
+            return Singleton.instance;
+        }
+        Singleton.instance = new Singleton(val);
+        return Singleton.instance;
+    }
+    echoVal() {
+        return console.log(this.value);
+    }
+}
+const singleton1 = Singleton.getInstance(1);
+const singleton2 = Singleton.getInstance(1);
+singleton1.echoVal();
+singleton2.echoVal();
